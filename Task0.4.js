@@ -1,4 +1,4 @@
-function oddOrEven(num){
+function evenOrOdd(num){
     if (num %2 !=0){
         return "odd";
     }
@@ -6,4 +6,4 @@ function oddOrEven(num){
         return "even";
     }
 }
-console.log(oddOrEven(5));
+console.log(evenOrOdd(5));
