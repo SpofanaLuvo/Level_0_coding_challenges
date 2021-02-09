@@ -1,12 +1,11 @@
 function convertToTime(number){
     var hours=0;
     var minutes=0;
-    var hSuffix;
-    var mSuffix;
+    var hUnit;
+    var mUnit;
 
     if (number<60){
         minutes=number;
-        hours="";
     }
     else{
         while(number>=60){
@@ -14,33 +13,20 @@ function convertToTime(number){
             number-=60;
             if(number<60){
                 minutes=number;
-                if (minutes==0){
-                    minutes="";
-                }
             }
         }
     }
-    
-    if (hours>1 && minutes ==0){
-        hSuffix=" Hours.";
-    }else if (hours>1){
-        hSuffix=" Hours, ";
-    }else if(hours==1 && minutes==0){
-        hSuffix=" Hour. ";
-    }else if (hours==0){
-        hSuffix="";
+    if(hours==1){
+        hUnit=" Hour, "
     }else{
-        hSuffix=" Hour, ";
+        hUnit = " Hours, "
     }
-    
-    if (minutes>1){
-        mSuffix=" Minutes.";
-    }else if(minutes==1){
-        mSuffix=" Minute.";
+    if (minutes==1){
+        mUnit=" Minute."
     }else{
-        mSuffix="";
+        mUnit=" Minutes."
     }
-
-    return hours+ hSuffix+ minutes+mSuffix;
+    var time =  hours+hUnit + minutes+mUnit;
+    return time;
 }
-console.log(convertToTime(180));
+console.log(convertToTime(61));
