@@ -10,4 +10,4 @@ function getVowels(string){
     return foundVowels;   
 }
 
-console.log("Vowels found: " + getVowels("aUnjekiolnsae"));
+console.log("Vowels: " + getVowels("aUnjekiolnsae"));

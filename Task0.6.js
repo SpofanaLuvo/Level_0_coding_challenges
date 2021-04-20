@@ -1,12 +1,15 @@
 function getMaximum(){
-    var max=-9999999999;
-
+    var minValue = 0;
+    var maxValue = 0;
     for (var i=0;i<arguments.length;i++){
-        if (arguments[i]>max){
-            max=arguments[i];
+        if(arguments[i]<minValue){
+            minValue = arguments[i];
+        }
+        if (arguments[i]>maxValue){
+            maxValue=arguments[i];
         }
     }
   
-    return max;
+    return maxValue;
 }
-console.log("Maximum number is "+ getMaximum(1,22,3,2));
+console.log(getMaximum(1,22,3,2));
